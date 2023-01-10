@@ -2,7 +2,7 @@
 
 ## Introduction
 
-> Diagram link
+> ## Diagram link
 
 ```
 https://lucid.app/lucidchart/25bac433-d042-43bd-a90d-56f33a62dfc9/edit?invitationId=inv_b10355e9-2d62-4f93-974e-fa3e0a1a9dd6
@@ -11,13 +11,13 @@ https://lucid.app/lucidchart/25bac433-d042-43bd-a90d-56f33a62dfc9/edit?invitatio
 This is a simple architecture that can be used for highly available application to deploy in aws.
 The components used for this application are VPC, subnets, EC2 instances, Internet Gateway, security groups, public and private subnets, and Application Load Balancer.
 
-> VPC
+> ## VPC
 
 > logical and isolated section of the AWS cloud in which to launch resources. This allows you to have full control over the network configuration, including IP address range, subnets, routing tables, and network gateways. Using a VPC, you can launch resources in a virtual network that closely resembles a traditional on-premises network.
 
 The VPC's IP address range is specified in CIDR notation (e.g. 10.0.0.0/16) and defines the range of IP addresses that are available for use within the VPC. This IP address range is divided into smaller blocks called subnets, which are used to organize and segment the network.
 
-> Subnets
+> ## Subnets
 
 > The purpose of subnets in a VPC is to segment the network into smaller, more manageable sections. This allows you to control access to resources in the VPC, improve security, and increase availability.
 
@@ -31,7 +31,7 @@ The VPC's IP address range is specified in CIDR notation (e.g. 10.0.0.0/16) and 
 
 By creating a public and private subnet, you can create a secure, segmented network environment that improves security and availability of your resources.
 
-> Elastic Compute Cloud (EC2)
+> ## Elastic Compute Cloud (EC2)
 
 > Amazon Elastic Compute Cloud (EC2) instances are virtual servers that are launched on the AWS cloud. They are used in the architecture to run applications and services.
 
@@ -45,7 +45,7 @@ When EC2 instances are launched in private subnets, they do not have a direct ro
 
 Launching instances in public and private subnets allows for a more secure and highly available architecture by isolating instances that do not require internet access from the public internet and by providing a direct route to the internet for instances that require it.
 
-> Internet Gateway (IGW)
+> ## Internet Gateway (IGW)
 
 > An Internet Gateway (IGW) is a VPC component that allows communication between resources in your VPC and the Internet. It provides a way for resources in your VPC to connect to the Internet, and for Internet traffic to reach resources in your VPC.
 
@@ -57,7 +57,7 @@ Once the Internet Gateway is attached to the VPC and the necessary routes are in
 
 To allow communication between the VPC and the internet, the Internet Gateway needs to be properly configured and attached to the VPC, and the appropriate routes needs to be set up in the VPC route table to direct internet-bound traffic to the Internet Gateway.
 
-> Security groups
+> ## Security groups
 
 > Security groups in AWS are a virtual firewall for your Amazon Elastic Compute Cloud (EC2) instances. They control inbound and outbound traffic to one or more instances by allowing or denying traffic based on a set of rules.
 
@@ -69,7 +69,7 @@ When an EC2 instance is launched, it is associated with one or more security gro
 
 Security groups can be used in a highly available architecture to control access to resources and improve security by limiting the traffic that is allowed to reach the resources, and by controlling the traffic that is allowed to leave the resources. They provide an essential layer of security, which can be configured based on the specific needs of the architecture.
 
-> Public and private subnets
+> ## Public and private subnets
 
 > Public and private subnets are used in a VPC to segment the network into smaller, more manageable sections and to control access to resources.
 
@@ -83,7 +83,7 @@ Public and private subnets are used to control inbound and outbound traffic in t
 
 It should also be noted that instances in private subnet can communicate with each other in the same subnet, while instances in public subnet can communicate with both the internet and instances in the same subnet. Additionally, instances in public subnet can be accessed remotely by a ssh session or RDP session, while instances in private subnet can only be accessed using VPN or Direct Connect.
 
-> Application Load Balancer (ALB)
+> ## Application Load Balancer (ALB)
 
 > An Application Load Balancer (ALB) is a Layer 7 load balancer that routes incoming HTTP/HTTPS traffic to one or more backend instances. The primary purpose of an ALB is to distribute incoming traffic across multiple instances, improving the scalability and availability of your applications.
 
@@ -106,7 +106,7 @@ Additionally, the ALB can perform health checks on the instances, monitoring the
 
 The Application Load Balancer is an essential component in any highly available and scalable architecture, by distributing the incoming traffic among available instances, it provides better performance, scalability and availability.
 
-> Route table
+> ## Route table
 
 > In a VPC, each subnet is associated with a route table that determines where network traffic is directed. The routing table for a public subnet typically includes a route that directs all Internet-bound traffic to an Internet Gateway, allowing resources in the public subnet to communicate with the Internet. The routing table for a private subnet typically does not include a route to the Internet Gateway and may instead include a route that directs all Internet-bound traffic to a NAT gateway, allowing resources in the private subnet to communicate with the Internet while remaining inaccessible from the Internet.
 
