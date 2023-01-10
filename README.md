@@ -2,6 +2,12 @@
 
 ## Introduction
 
+> Diagram link
+
+```
+https://lucid.app/lucidchart/25bac433-d042-43bd-a90d-56f33a62dfc9/edit?invitationId=inv_b10355e9-2d62-4f93-974e-fa3e0a1a9dd6
+```
+
 This is a simple architecture that can be used for highly available application to deploy in aws.
 The components used for this application are VPC, subnets, EC2 instances, Internet Gateway, security groups, public and private subnets, and Application Load Balancer.
 
